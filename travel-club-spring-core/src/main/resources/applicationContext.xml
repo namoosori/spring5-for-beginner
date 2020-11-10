@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- store -->
+    <bean id="clubStore"
+		class="io.namoosori.travelclub.spring.store.mapstore.ClubMapStore">
+	</bean>
+
+ 	<bean id="memberStore"
+ 		class="io.namoosori.travelclub.spring.store.mapstore.MemberMapStore">
+ 	</bean>
+
+	<bean id="membershipStore"
+		  class="io.namoosori.travelclub.spring.store.mapstore.MembershipMapStore">
+	</bean>
+
+	<!-- service -->
+	<bean id="clubService"
+		  class="io.namoosori.travelclub.spring.service.logic.ClubServiceLogic">
+		<constructor-arg ref="clubStore" />
+	</bean>
+
+	<bean id="memberService"
+		  class="io.namoosori.travelclub.spring.service.logic.MemberServiceLogic">
+		<constructor-arg ref="memberStore" />
+	</bean>
+
+	<bean id="membershipService"
+		  class="io.namoosori.travelclub.spring.service.logic.MembershipServiceLogic">
+		<constructor-arg ref="membershipStore" />
+		<constructor-arg ref="clubStore" />
+		<constructor-arg ref="memberStore" />
+	</bean>
+</beans>
+
+
+
+
+
