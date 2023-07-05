@@ -1,6 +1,8 @@
-package io.namoosori.travelclub.spring.store;
+package io.namoosori.travelclub.spring.store.mapstore;
 
 import io.namoosori.travelclub.spring.aggregate.club.TravelClub;
+import io.namoosori.travelclub.spring.store.ClubStore;
+import org.springframework.stereotype.Repository;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -8,6 +10,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Repository("ClubStore")
 public class ClubMapStore implements ClubStore {
     //Linked hash map에 저장
     private Map<String, TravelClub> clubMap;
