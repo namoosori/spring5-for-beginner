@@ -34,6 +34,7 @@ public class TravelClubApp {
         System.out.println("-----------------------------------------------------------");
 
         MemberService memberService = context.getBean("memberServiceLogic", MemberService.class);
+        // Bean으로 가져온다
 
         String memberId = memberService.registerMember(
                 new MemberCdo(
