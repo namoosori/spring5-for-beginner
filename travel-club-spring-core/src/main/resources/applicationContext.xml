@@ -5,7 +5,15 @@
         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <!--    // 일일이 bean등록하지 않아도 특정패키지부터 빈들을 찾아줌-->
+    <context:component-scan base-package="io.namoosori.travelclub.spring"/>
+<!--    bean직접등록(옛날방법)-->
+<!--    <bean id="clubStore" class="io.namoosori.travelclub.spring.store.mapstore.ClubMapStore"/>-->
+<!--    <bean id="clubService" class="io.namoosori.travelclub.spring.service.logic.ClubServiceLogic">-->
+<!--            <constructor-arg ref="clubStore"/>-->
+<!--    </bean>-->
 </beans>
+
 
 
 
