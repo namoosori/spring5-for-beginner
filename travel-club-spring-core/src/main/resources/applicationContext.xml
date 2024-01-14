@@ -5,6 +5,14 @@
         http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:component-scan base-package="io.namoosori.travelclub.spring"/>
+
+<!--    <bean id="clubStore" class="io.namoosori.travelclub.spring.store.mapstore.ClubMapStore"/>-->
+
+<!--    <bean id="clubService" class="io.namoosori.travelclub.spring.service.logic.ClubServiceLogic">-->
+<!--        <constructor-arg ref="clubStore"/>-->
+<!--    </bean>-->
+
 </beans>
 
 

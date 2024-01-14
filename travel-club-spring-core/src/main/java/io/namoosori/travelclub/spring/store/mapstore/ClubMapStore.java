@@ -2,6 +2,7 @@ package io.namoosori.travelclub.spring.store.mapstore;
 
 import io.namoosori.travelclub.spring.aggregate.club.TravelClub;
 import io.namoosori.travelclub.spring.store.ClubStore;
+import org.springframework.stereotype.Repository;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -9,9 +10,10 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Repository("clubStore")
 public class ClubMapStore implements ClubStore {
 
-    private Map<String, TravelClub> clubMap;
+    private final Map<String, TravelClub> clubMap;
 
     public ClubMapStore(){
         this.clubMap = new LinkedHashMap<>();
